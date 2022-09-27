@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express</title>
+  </head>
+  <body>
+    <form action="/output" method="post">
+      <div>
+          <label for="name">Name</label>
+          <input type="text" name="name">
+          <label for="age">Age</label>
+          <input type="number" name="age">
+          <input type="submit" value="Submit Query">
+      </div>
+  </form>
+  
+    <% if (hour <=18 && hour >=6) { %>
+    <link rel="stylesheet" href="../css/day.css" />
+    <% } else {%>
+    <link rel="stylesheet" href="../css/night.css" />
+    <% } %>
+  </body>
+</html>

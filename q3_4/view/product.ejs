@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Product Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1 id="header">Express Product</h1>
+    <div id="container">
+        <%-include('./header.ejs') %>
+
+        <div id="body">
+            <div id="display">
+                <div id="details">
+                    <% for(product of products ) {%>
+                    <h2><%=product.name%></h2>
+                    <p><%=product.price %></p>
+                    <p><%=product.description %></p>
+                    <form action="/addToCart" method="post">
+                        <input type="hidden" name="item" value="<%=product.id%>">
+                        <button type="submit" id="atc"> Add to cart </button>
+                    </form>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('./footer.ejs') %>  
+</body>
+</html>
